@@ -51,10 +51,10 @@ class App(ctk.CTk):
         frame.place(relx=0.5, rely=0.5, anchor="center")
         
         is_registered = os.path.exists("vault_data/.salt")
-        title_text = "Master Password Oluştur" if not is_registered else "Giriş Yap"
+        title_text = "Şifre Oluştur" if not is_registered else "Giriş Yap"
         
         ctk.CTkLabel(frame, text=title_text, font=("Roboto", 24, "bold")).pack(pady=20)
-        self.password_entry = ctk.CTkEntry(frame, placeholder_text="Master Password", show="*", width=250)
+        self.password_entry = ctk.CTkEntry(frame, placeholder_text="Şifre", show="*", width=250)
         self.password_entry.pack(pady=10)
 
         btn_text = "Kaydet" if not is_registered else "Giriş"
